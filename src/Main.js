@@ -12,7 +12,7 @@ const Main = () => {
         <h1>Simple SPA</h1>
         <ul className="header">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink exact to="/">Home</NavLink>
           </li>
           <li>
             <NavLink to="/stuff">Stuff</NavLink>
@@ -22,7 +22,7 @@ const Main = () => {
           </li>
           <div className="content">
               {/* The Route component takes in a path prop that tells it when the route will be active and the component to render */}
-              <Route path="/" component={Home}/>
+              <Route exact path="/" component={Home}/>
               <Route path="/stuff" component={Stuff}/>
               <Route path="/contact" component={Contact}/>
           </div>
